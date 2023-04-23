@@ -5,7 +5,10 @@ let score = 0;
 
 var usr = readlineSync.question("what's your name ? : ");
 console.log("welcome " + usr + "!");
+console.log();
 
+console.log("let's begin the quiz !!!"); 
+console.log();
 
 var questions = [{
     question: "what's my surname ? : ",
@@ -14,8 +17,8 @@ var questions = [{
     question: "what's my favorite PC game ? ( Hint: FPS Competetive ) : ",
     answer: "csgo"
 }, {
-    question: "In which University Currently I'm studying ? : ", 
-    answer: "paruluniversity"
+    question: "In which University Currently I'm studying ? : ",  
+    answer: "parul university"
 }, {
     question: "Where do I live ? ( City ) : ",
     answer: "surat"
@@ -50,7 +53,18 @@ function game() {
 }
 
 function totalscore() {
-    console.log("you've Scored: " + score);
+  if (score == 5 ) {
+    console.log("VeryGood!, You've Scored " + score + "/5");
+  }
+  else if (score < 5 && score >= 3) {
+    console.log("Good!, You've Scored " + score + "/5"); 
+  }
+  else if (score == 0) {
+    console.log("You've Scored " + score + "/5 :(");
+  }
+  else {
+    console.log("Could've been worse but You've Scored " + score + "/5");
+  }
 }
 
 
